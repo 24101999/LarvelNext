@@ -15,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::post('/', [HomeController::class, 'post']);
-Route::get('/', [HomeController::class, 'post']);
+Route::get('/{id?}', [HomeController::class, 'dados']);
+Route::post('/post', [HomeController::class, 'post']);
+Route::get('/post', [HomeController::class, 'post']);
+Route::delete('/delete/{id?}', [HomeController::class, 'destroy']);
+Route::get('/edit{id?}', [HomeController::class, 'edit']);
+Route::put('/update/{id?}', [HomeController::class, 'update']);
